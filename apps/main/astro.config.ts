@@ -35,4 +35,7 @@ export default defineConfig({
   },
   output: "hybrid",
   adapter: vercel(),
+  experimental: {
+    hybridOutput: true,
+  },
 });
