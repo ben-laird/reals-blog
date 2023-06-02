@@ -1,0 +1,30 @@
+{
+  "name": "@typelaunch-turbo/external-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/@typelaunch-turbo/external-vite.umd.cjs",
+  "module": "./dist/@typelaunch-turbo/external-vite.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/@typelaunch-turbo/external-vite.js",
+      "require": "./dist/@typelaunch-turbo/external-vite.umd.cjs"
+    }
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build:dev": "vite build",
+    "build": "pnpm build:dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "cov": "vitest run --coverage",
+    "cov:watch": "vitest run --coverage",
+    "cov:detail": "vitest run --coverage && open-cli index.html",
+    "lint": "tsc && rome check .",
+    "format": "rome format .",
+    "uncache": "rm -rf .turbo",
+    "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules"
+  }
+}
