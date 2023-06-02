@@ -1,11 +1,12 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
+import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import remarkToc from "remark-toc";
 import { SITE } from "./src/config";
-import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,4 +33,6 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js"],
     },
   },
+  output: "server",
+  adapter: vercel(),
 });
