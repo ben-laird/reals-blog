@@ -1,6 +1,6 @@
 ---
 pubDateTime: 2023-06-02T23:03:00-05:00
-title: "Functions: The Start"
+title: "Functions - The Start"
 description: "Some initial set theory and functions, the crux of non-boring mathematics"
 tags:
   - unit-1
