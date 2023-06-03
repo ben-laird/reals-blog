@@ -1,6 +1,7 @@
 ---
 pubDateTime: 2023-06-01T17:31:00-05:00
 title: Start Here!
+postSlug: start-here
 description: "Math has some preliminaries to it. Start here and learn those things other mathematicians might not tell you"
 featured: true
 tags:
