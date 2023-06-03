@@ -22,8 +22,6 @@ const ogUrl = new URL(
   ogImage ? ogImage : `${postSlug ? postSlug : title}.png`,
   Astro.url.origin
 ).href;
-
-console.log(ogUrl);
 ---
 
 <Layout title={title} author={author} description={description} ogImage={ogUrl}>
