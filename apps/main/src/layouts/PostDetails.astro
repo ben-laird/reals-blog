@@ -19,7 +19,7 @@ const { title, author, description, ogImage, pubDateTime, tags, postSlug } =
 const { Content } = await post.render();
 
 const ogUrl = new URL(
-  ogImage ? ogImage : `${postSlug ? postSlug : title}.png`,
+  ogImage ? ogImage : `${postSlug ? postSlug : title}.svg`,
   Astro.url.origin
 ).href;
 
@@ -33,7 +33,7 @@ console.log(ogUrl);
       class="focus-outline mt-8 mb-2 flex hover:opacity-75"
       onclick="
       history.back()
-"
+      "
     >
       <svg xmlns="http://www.w3.org/2000/svg"
         ><path
