@@ -84,9 +84,7 @@ Well, a function could spit out multiple outputs for a single input. But, do we 
 We also need it to map from one set to another; seems obvious, but still. The intuition above actually doesn't guarantee the function will map everything from one set to everything in the other, and that's where the defining properties of a function, a one-to-one function, and an onto function come into play. We can codify all these properties into a definition, using a thing that takes in two sets and essentially tracks the relationship between them: a subset of a Cartesian product.
 
 $$
-\text{A function } f \text{ from sets } A \text{ to } B \space (\text{noted } f: A \rarr B) \\
-\big \Updownarrow \\
-\text{a subset } f \subseteq A \times B \space | \space \forall a \in A, \space (a, b) \in f \wedge (a, b') \in f \rArr b = b'
+\text{A function } f \text{ from sets } A \text{ to } B \space (\text{noted } f: A \rarr B) \iff \text{a subset } f \subseteq A \times B \space | \space \forall a \in A, \space (a, b) \in f \wedge (a, b') \in f \rArr b = b'
 $$
 
 Essentially, a function is a subset of $A \times B$ where _every_ $a$ gets mapped to a _unique_ $b$. Granted, two different $a$ values could map to the same $b$ value, and not every $b$ value may have a corresponding $a$ value (the range $R(f)$ is not necessarily equal to the codomain $B$). Interestingly, the definition of a function does guarantee that $A$ is equal to $D(f)$. Just a tidbit. The 1-1 and onto properties help solve these "functional uh-ohs".
