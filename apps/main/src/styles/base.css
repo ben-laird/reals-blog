@@ -123,6 +123,12 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+
+  /* https://jan-mueller.at/blog/next-level-heading-anchors/ styles */
+
+  *:is(h1, h2, h3, h4, h5, h6) {
+    @apply flex items-center gap-2;
+  }
 }
 
 /* Katex Styles */

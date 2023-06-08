@@ -3,9 +3,13 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeKatex from "rehype-katex";
+import rehypeSlug from "rehype-slug";
 import remarkMath from "remark-math";
 import remarkToc from "remark-toc";
+
+import { autolinkConfig } from "./rehypeAutolink.config";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
@@ -22,9 +26,13 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [remarkToc, remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [
+      rehypeSlug,
+      [rehypeAutolinkHeadings, autolinkConfig],
+      rehypeKatex,
+    ],
     shikiConfig: {
-      theme: "one-dark-pro",
+      theme: "material-theme-palenight",
       wrap: true,
     },
   },
