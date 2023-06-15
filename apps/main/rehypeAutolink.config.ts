@@ -5,7 +5,7 @@ import type { Options } from "rehype-autolink-headings";
 
 const AnchorLinkIcon = h(
   "span",
-  { ariaHidden: "true", class: "anchor-icon" },
+  { ariaHidden: true, class: "anchor-icon" },
   h(
     "svg",
     {
@@ -41,7 +41,7 @@ export const autolinkConfig: Options = {
     h(
       "span.anchor-icon",
       {
-        ariaHidden: "true",
+        ariaHidden: true,
       },
       AnchorLinkIcon,
     ),
